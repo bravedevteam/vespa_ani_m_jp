@@ -150,7 +150,7 @@ $(document).ready(function(){
           prevEl: '.swiper-button-prev',
         },
     });
-
+    
     $(".tab_content").hide();
     $(".tab_content:first").show();
 

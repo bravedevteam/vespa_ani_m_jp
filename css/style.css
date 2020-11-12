@@ -1,6 +1,6 @@
 #skrollr-body{width:100%}
 body{background:#f1f8ff}
-header{position:fixed;background:black;height:3.5rem;width:100%;z-index:3;opacity:0.7;}
+header{position:fixed;background:black;height:3.5rem;width:100%;z-index:1000;opacity:0.7;}
 .menu-trigger,
 .menu-trigger span {
 	display: inline-block;
@@ -39,7 +39,7 @@ header{position:fixed;background:black;height:3.5rem;width:100%;z-index:3;opacit
 	z-index:900;  
 	background-color:#000;  
 }
-.nav{position:fixed;z-index:10000;overflow:hidden;top:0;left:-70%;background:#f1f8ff;width:70%;height:100vh;-webkit-transition:transform ease-out 0.8s;transition:transform ease-out 0.8s}
+.nav{position:fixed;z-index:10000;overflow:hidden;top:0;left:-60%;background:#f1f8ff;width:60%;height:100vh;-webkit-transition:transform ease-out 0.8s;transition:transform ease-out 0.8s}
 .btn_close{position:absolute;top:1rem;right:1rem;z-index:1;cursor: pointer;}
 .btn_close img{width:70%}
 .lnb_menu{text-align:left;box-sizing:content-box;margin-top:64px;padding-left:1.5rem}
@@ -58,6 +58,9 @@ header{position:fixed;background:black;height:3.5rem;width:100%;z-index:3;opacit
 	transition: background-size 1s;
 	background-position:left 0 top -5px;
 }
+.underline:nth-child(1){width:70px;}
+.underline:nth-child(2),.underline:nth-child(3){width:55px;}
+.underline:nth-child(4),.underline:nth-child(5){width:35px;}
 /*.underline.on {
 	background-size: 100% 100%;
 	color:#222;
@@ -71,8 +74,7 @@ header{position:fixed;background:black;height:3.5rem;width:100%;z-index:3;opacit
 .chapter1{height:100vh;width:100%;}
 .chapter1_logo,.chapter1_tit1,.chapter1_tit_sub,.chap1_video_sub,.chap1_detail{position: absolute;z-index:2;width:100%;}
 .chapter1_logo{height:7.85rem;background:url('../images/bg_logo.png') center top no-repeat;top:5rem;background-size:contain;}
-.chapter1_tit1{top:14.5rem;text-align:center;color:white;font-size:2rem}
-.chap1_video video{object-fit:cover;width:100%;height:100vh;}
+.chapter1_tit1{top:14.5rem;text-align:center;color:white;font-size:2rem}.chap1_video video{object-fit:cover;width:100%;height:100vh;}
 .chap1_video::after{background:black;content:'';position: absolute;top:0;left:0;width:100%;height:100vh;opacity:.6;z-index:1}
 .chapter1_tit_sub{color:white;top:21.75rem;text-align:center;}
 .chapter1_tit_sub p{line-height:1.75rem}
@@ -90,7 +92,7 @@ header{position:fixed;background:black;height:3.5rem;width:100%;z-index:3;opacit
 .chap2_visual .chap2_tit p:last-child{font-size:2rem;line-height:2.5rem;font-weight:bold;margin-top:1rem}
 .chap2_visual_top{margin-bottom:3rem}
 .chap2_visual_top img{width:100%;}
-.chap2_visual .chap2_video{width:calc(100% - 3rem);margin:2rem auto 0 auto;z-index:2;position: relative;padding:0 1.5rem}
+.chap2_visual .chap2_video{width:calc(100% - 3rem);margin:2.5rem auto 0 auto;z-index:2;position: relative;padding:0 1.5rem}
 .chap2_visual .chap2_sub_video_btn{position: absolute;z-index:3;top:1rem;right:2rem}
 .chap2_visual_top img{width:100%;}
 .chap2_content{width:100%;overflow: hidden;margin-top:3.5rem}
@@ -105,7 +107,7 @@ header{position:fixed;background:black;height:3.5rem;width:100%;z-index:3;opacit
 /* chapter3 */
 .chapter3{position: relative;width:calc(100% - 3rem);padding:3rem 1.5rem 0 1.5rem}
 .chapter3_tit{position: relative;padding:1.5rem 0 4rem 0}
-.chapter3_tit h2{position: absolute;left:0;font-size:1.7rem;color:#00dce2;font-weight:800;}
+.chapter3_tit h2{position: absolute;left:0;font-size:1.7rem;color:#00dce2;font-family:'Poppins' !important;font-weight:800;}
 .chapter3_tit div:last-child{position: absolute;right:0}
 .chapter3_tit div:last-child img{width:40%;float:right;vertical-align:top;}
 .chapter3_tit div:last-child span:last-child{float:right;font-size:1rem;font-weight:bold;margin-top:10px}
@@ -157,7 +159,7 @@ header{position:fixed;background:black;height:3.5rem;width:100%;z-index:3;opacit
 /* chapter3 */
 /* chapter4 */
 .chapter4{position: relative;padding-top:3rem}
-.chapter4 h2{font-size:2.5rem;color:#00dce2;font-weight:800;padding:0 1.5rem;width:calc(100% - 3rem)}
+.chapter4 h2{font-size:2.5rem;color:#00dce2;font-family:'Poppins' !important;font-weight:800;width:calc(100% - 3rem);padding:0 1.5rem}
 .chap4_tab_wrap{clear: both;overflow: hidden;width:calc(100% - 3rem);padding:0 1.5rem}
 .swiper-slide div:first-child img,.tab_wrap .chap4_char_info div:last-child img{width:100%}
 .chap4_tab_wrap ul{width:100%;margin-top:2rem;}
@@ -172,7 +174,8 @@ header{position:fixed;background:black;height:3.5rem;width:100%;z-index:3;opacit
 .tab_wrap{overflow: hidden;margin-top:3rem;position: relative;}
 .tab_wrap .chap4_char_info{clear: both;width:100%;letter-spacing:-1px;}
 .tab_wrap .chap4_char_info{width:calc(100% - 3rem);padding:0 1.5rem;margin-top:4rem}
-.tab_wrap .chap4_char_info h3{margin-bottom:2rem;font-weight:bold;color:#222;font-size:1.7rem}
+.tab_wrap .chap4_char_info h3{margin-bottom:2rem}
+.tab_wrap .chap4_char_info h3 img{height:1.7rem;}
 .tab_wrap .chap4_char_info .chap4_char_info_voice{font-size:1.2rem}
 .tab_wrap .chap4_char_info .chap4_char_info_voice span{font-weight:bold;background:url('../images/bg_chap4_info_voice_line.png') right 7px no-repeat;padding-right:10px;margin-right:10px;}
 .tab_wrap .chap4_char_info div:last-child{margin-top:2rem;font-size:1rem;color:#222;line-height:2rem;letter-spacing:-1px;}
@@ -191,12 +194,13 @@ header{position:fixed;background:black;height:3.5rem;width:100%;z-index:3;opacit
 .chap4_visual{width:calc(100% - 3rem);padding:0 1.5rem;margin:2.5rem auto 0 auto;z-index:2;position: relative;background:url('../images/bg_chap4_video.png') left 80% bottom no-repeat;padding-bottom:9.8rem}
 .chap4_visual .chap2_video{width:100%;}
 .chap4_visual .chap2_sub_video_btn{position: absolute;z-index:3;top:1rem;right:2rem}
+.tab_wrap .chap4_char_info h3{margin-bottom:2rem;font-weight:bold;color:#222;font-size:1.7rem}
 /* chapter4 */
 /* chapter5 */
 .chapter5{position: relative;width:calc(100% - 3rem);padding:3rem 1.5rem 2rem 1.5rem}
-.chapter5 h2{font-size:3.5rem;color:#00dce2;font-weight:800;}
+.chapter5 h2{font-size:3.2rem;color:#00dce2;font-family:'Poppins' !important;font-weight:800;}
 .tabs_chap5{margin-top:3rem;}
-.tabs_chap5 li{font-size:1.2rem;float:left;color:#b7c5d5;}
+.tabs_chap5 li{font-size:1.2rem;float:left;color:#b7c5d5;font-family:'Poppins' !important;}
 .tabs_chap5 li.on,.chap5_tab_wrap .tabs_chap5 li:hover{color:#222;background-image: linear-gradient(transparent calc(100% - 2px), #1fd9de 2px);font-weight:bold;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -228,9 +232,9 @@ header{position:fixed;background:black;height:3.5rem;width:100%;z-index:3;opacit
 /* chapter5 */
 /* chapter6 */
 .chapter6{position: relative;width:calc(100% - 3rem);padding:3rem 1.5rem 2rem 1.5rem}
-.chapter6 h2{font-size:3.5rem;color:#00dce2;font-weight:800;}
+.chapter6 h2{font-size:3.5rem;color:#00dce2;font-family:'Poppins' !important;font-weight:800;}
 .tabs_chap6{margin-top:3rem;}
-.tabs_chap6 li{font-size:1.2rem;float:left;color:#b7c5d5;}
+.tabs_chap6 li{font-size:1.2rem;float:left;color:#b7c5d5;font-family:'Poppins' !important;}
 .tabs_chap6 li.on,.chap5_tab_wrap .tabs_chap5 li:hover{color:#222;background-image: linear-gradient(transparent calc(100% - 2px), #1fd9de 2px);font-weight:bold;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -258,7 +262,7 @@ header{position:fixed;background:black;height:3.5rem;width:100%;z-index:3;opacit
 /* chapter6 */
 .chapter7{width:100%;position: relative;}
 .chapter7_logo,.chapter7_tit1,.chapter7_tit_sub,.chap7_video_sub,.chap7_detail{position: absolute;z-index:2;width:100%;}
-.chapter7_logo{height:7.85rem;background:url('../images/bg_logo.png') center top no-repeat;top:5rem;background-size:contain;}
+.chapter7_logo{height:4.5rem;background:url('../images/img_chap1_visual_top_title.png') center top no-repeat;top:5rem;background-size:contain;}
 .chapter7_tit1{top:14rem;text-align:center;color:white;font-size:2rem}
 .chap7_video video{object-fit:cover;width:100%;height:110vh;}
 .chap7_video::after{background:black;content:'';position: absolute;top:0;left:0;width:100%;opacity:.6;z-index:1;height:110vh;}
@@ -283,7 +287,7 @@ address img{vertical-align: middle;margin-right:10px;width:3rem;}
 @media only screen and (min-device-width : 320px) and (max-device-width : 321px){ 
     .chapter1_logo{height:6.85rem;top:5rem;}
     .chapter1_tit1{top:13rem;}
-    .chapter1_tit_sub{top:16rem;}
+    .chapter1_tit_sub{top:18rem;}
     .chap1_video_sub{height:4rem;top:24.5rem}
     .chap1_detail{height:6.5rem;top:28rem}
     .nav{width:70%;left:-70%}
@@ -298,16 +302,17 @@ address img{vertical-align: middle;margin-right:10px;width:3rem;}
     .chapter1_tit_sub{top:18rem;}
     .chap1_video_sub{height:5rem;top:25rem}
     .chap1_detail{height:7.5rem;top:30rem}
+    
     .chap4_tab_wrap ul li{width:50%;font-size:1.1rem;letter-spacing:-2px; text-align:left;float:left;}
     .chap4_tab_wrap ul li:nth-child(3){clear: both;margin-top:1rem}
     .chap4_tab_wrap ul li:nth-child(3){float:left;}
     .chap4_tab_wrap ul li:nth-child(4){float:left;margin-top:1rem}
     .chap6_bg{background:url('../images/Untitled-1bg_chap6_musicplayer.png') no-repeat;width:100%;height:210px;background-size:contain;display:block;}
     .chap6_bg div{float:left;margin-left:1rem;margin-top:130px}
-    .chapter7_logo{height:7.85rem;background:url('../images/bg_logo.png') center top no-repeat;top:6rem;background-size:contain;}
-    .chapter7_tit1{top:16rem;}
-    .chapter7_tit_sub{color:white;top:23rem;text-align:center;}
-    .chap7_video_sub{height:5rem;background:url('../images/btn_chap1_video_sub.png') center top no-repeat;background-size:contain;top:30rem;}
+    .chapter7_logo{height:5rem;background:url('../images/img_chap1_visual_top_title.png') center top no-repeat;top:6rem;background-size:contain;}
+    .chapter7_tit1{height:4.65rem;background:url('../images/img_chapter7_tit1.png') center top no-repeat;top:14rem;background-size:contain;}
+    .chapter7_tit_sub{color:white;top:21rem;text-align:center;}
+    .chap7_video_sub{height:5rem;background:url('../images/btn_chap1_video_sub.png') center top no-repeat;background-size:contain;top:29rem;}
 }
 @media only screen and (min-device-width : 375px) and (max-device-width : 376px) { 
     .chapter1_logo{height:7.85rem;top:5rem;}
@@ -319,8 +324,8 @@ address img{vertical-align: middle;margin-right:10px;width:3rem;}
     .chap4_tab_wrap ul li:nth-child(3){clear: both;margin-top:1rem}
     .chap4_tab_wrap ul li:nth-child(3){float:left;}
     .chap4_tab_wrap ul li:nth-child(4){float:left;margin-top:1rem}
-    .chapter7_logo{height:7.85rem;background:url('../images/bg_logo.png') center top no-repeat;top:6rem;background-size:contain;}
-    .chapter7_tit1{top:16rem;}
+    .chapter7_logo{height:5rem;background:url('../images/img_chap1_visual_top_title.png') center top no-repeat;top:9rem;background-size:contain;}
+    .chapter7_tit1{height:4.65rem;background:url('../images/img_chapter7_tit1.png') center top no-repeat;top:16rem;background-size:contain;}
     .chapter7_tit_sub{color:white;top:23rem;text-align:center;}
     .chap7_video_sub{height:5rem;background:url('../images/btn_chap1_video_sub.png') center top no-repeat;background-size:contain;top:30rem;}
 }
@@ -331,8 +336,8 @@ address img{vertical-align: middle;margin-right:10px;width:3rem;}
     .chap4_tab_wrap ul li:nth-child(4){float:left;margin-top:1rem}
     .chap6_bg{background:url('../images/Untitled-1bg_chap6_musicplayer.png') no-repeat;width:100%;height:250px;background-size:contain;display:block;}
     .chap6_bg div{float:left;margin-left:1rem;margin-top:170px}
-    .chapter7_logo{height:7.85rem;background:url('../images/bg_logo.png') center top no-repeat;top:7rem;background-size:contain;}
-    .chapter7_tit1{top:17rem;}
+    .chapter7_logo{height:6rem;background:url('../images/img_chap1_visual_top_title.png') center top no-repeat;top:7rem;background-size:contain;}
+    .chapter7_tit1{height:4.65rem;background:url('../images/img_chapter7_tit1.png') center top no-repeat;top:16rem;background-size:contain;}
     .chapter7_tit_sub{color:white;top:24rem;text-align:center;}
     .chap7_video_sub{height:5rem;background:url('../images/btn_chap1_video_sub.png') center top no-repeat;background-size:contain;top:33rem;}
     .chap7_appdown_btn{text-align:center;width:calc(100% - 3rem);padding:0 1.5rem;position: absolute;bottom:7rem}
@@ -351,15 +356,12 @@ address img{vertical-align: middle;margin-right:10px;width:3rem;}
     .chap6_bg{background:url('../images/Untitled-1bg_chap6_musicplayer.png') no-repeat;width:100%;height:490px;background-size:contain;display:block;}
     .chap6_bg div{float:left;margin-left:1rem;margin-top:410px}
 
-    .chapter7_logo{height:7.85rem;background:url('../images/bg_logo.png') center top no-repeat;top:9rem;background-size:contain;}
-    .chapter7_tit1{top:19rem;}
+    .chapter7_logo{height:7.85rem;background:url('../images/img_chap1_visual_top_title.png') center top no-repeat;top:9rem;background-size:contain;}
+    .chapter7_tit1{height:4.65rem;background:url('../images/img_chapter7_tit1.png') center top no-repeat;top:19rem;background-size:contain;}
     .chapter7_tit_sub{color:white;top:27rem;text-align:center;}
     .chapter7_tit_sub p{line-height:3.4rem;}
     .chap7_video_sub{height:5rem;background:url('../images/btn_chap1_video_sub.png') center top no-repeat;background-size:contain;top:42rem;}
     .chap7_appdown_btn{text-align:center;width:calc(100% - 3rem);padding:0 1.5rem;position: absolute;bottom:9rem}
-
-    .chap4_tab_wrap ul li{width:25%;font-size:1rem;letter-spacing:-2px; text-align:center;float:left;}
-    
 }
 @media only screen and (min-device-width : 1024px){ 
     .chapter1_logo{height:15.7rem;top:10rem;}
@@ -384,8 +386,6 @@ address img{vertical-align: middle;margin-right:10px;width:3rem;}
     .chapter7_tit_sub p{line-height:3.5rem}
     .chap7_video_sub{height:7rem;top:56rem}
     .chap7_appdown_btn{text-align:center;width:calc(100% - 3rem);padding:0 1.5rem;position: absolute;bottom:10rem}
-
-    .chap4_tab_wrap ul li{width:25%;font-size:1.3rem;letter-spacing:-2px; text-align:center;float:left;}
 }
 
 
